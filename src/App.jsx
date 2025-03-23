@@ -25,10 +25,11 @@ const RamadhanPage = () => {
         allowEscapeKey: false,
         color: "#fff",
         preConfirm: (inputValue) => {
-          if (inputValue) {
-            return inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
+          if (!inputValue) {
+            Swal.showValidationMessage("Nama belum diisi!");
+            return false; // Return false to prevent the flow
           }
-          return inputValue;
+          return inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
         },
       }).then((result) => {
         if (result.value) {

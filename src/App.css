@@ -1,5 +1,34 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/Amiko-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+.swal2-confirm {
+  background-color: #877057 !important; /* Warna pink pastel */
+  color: white !important;
+  transition: background-color 0.3s ease, transform 0.2s ease !important;
+}
+
+.swal2-validation-message {
+  background-color: transparent !important; /* Warna latar belakang merah muda */
+  color: white !important; /* Warna teks merah */
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 .ramadhan-page {
   position: relative;
   height: 100vh;
