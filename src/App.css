@@ -2,24 +2,18 @@
 
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('fonts/Amiko-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-body {
-  font-family: 'MyCustomFont', sans-serif;
+  src: url('../public/fonts/Safira.ttf') format('truetype');
 }
 
 .swal2-confirm {
-  background-color: #877057 !important; /* Warna pink pastel */
+  background-color: #877057 !important; 
   color: white !important;
   transition: background-color 0.3s ease, transform 0.2s ease !important;
 }
 
 .swal2-validation-message {
-  background-color: transparent !important; /* Warna latar belakang merah muda */
-  color: white !important; /* Warna teks merah */
+  background-color: transparent !important; 
+  color: white !important; 
   padding: 10px 20px !important;
   border-radius: 8px !important;
   font-size: 14px !important;
@@ -27,7 +21,6 @@ body {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 .ramadhan-page {
   position: relative;
@@ -51,13 +44,4 @@ body {
   color: white;
   text-align: center;
   padding: 20px;
-}
-
-h1 {
-  font-size: 3rem;
-  margin-top: 20vh;
-}
-
-p {
-  font-size: 1.2rem;
 }

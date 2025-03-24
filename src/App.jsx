@@ -11,7 +11,7 @@ const RamadhanPage = () => {
   useEffect(() => {
     setTimeout(() => {
       Swal.fire({
-        title: "Halo, Masukin nama kamu dibawah yaa",
+        html: '<p class="text-2xl tracking-widest" style="font-family: \'MyCustomFont\', sans-serif;">Masukin nama kamu di bawah yaaa<p>',
         input: "text",
         imageUrl: satu,
         imageWidth: 200,
@@ -27,7 +27,7 @@ const RamadhanPage = () => {
         preConfirm: (inputValue) => {
           if (!inputValue) {
             Swal.showValidationMessage("Nama belum diisi!");
-            return false; // Return false to prevent the flow
+            return false; 
           }
           return inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
         },
