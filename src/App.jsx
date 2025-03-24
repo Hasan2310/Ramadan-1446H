@@ -31,6 +31,10 @@ const RamadhanPage = () => {
           }
           return inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
         },
+        customClass: {
+          input: 'custom-input',
+          confirmButton: 'custom-confirm-btn'
+        }
       }).then((result) => {
         if (result.value) {
           Swal.fire({
