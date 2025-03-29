@@ -1,17 +1,20 @@
 import React, { useEffect } from "react";
 import Swal from "sweetalert2";
-import "./App.css";
+import { useNavigate } from "react-router-dom"; 
 import videoSource from './assets/V.mp4';
 import satu from "./assets/image.gif";
 import dua from "./assets/maaf.gif";
 import tiga from "./assets/hehe.gif";
 import empat from "./assets/sedih.gif";
+import "./App.css";
 
-const RamadhanPage = () => {
+const App = () => {
+  const navigate = useNavigate(); 
+
   useEffect(() => {
     setTimeout(() => {
       Swal.fire({
-        html: '<p class="text-2xl tracking-widest" style="font-family: \'MyCustomFont\', sans-serif;">Masukin nama kamu di bawah yaaa<p>',
+        html: '<p class="text-2xl tracking-widest" style="font-family: \'MyCustomFont\', sans-serif;">Assalamualaikum <br/> Masukin nama kamu di bawah yaaa<p>',
         input: "text",
         imageUrl: satu,
         imageWidth: 200,
@@ -27,7 +30,7 @@ const RamadhanPage = () => {
         preConfirm: (inputValue) => {
           if (!inputValue) {
             Swal.showValidationMessage("Nama belum diisi!");
-            return false; 
+            return false;
           }
           return inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
         },
@@ -84,7 +87,7 @@ const RamadhanPage = () => {
                     allowOutsideClick: false,
                     allowEscapeKey: false,
                   }).then(() => {
-                    window.location = "index1.html";
+                    navigate('/Ramadan-1446H/THR');
                   });
                 } else if (result.dismiss === Swal.DismissReason.cancel) {
                   Swal.fire({
@@ -112,7 +115,7 @@ const RamadhanPage = () => {
                       allowOutsideClick: false,
                       allowEscapeKey: false,
                     }).then(() => {
-                      window.location = "index1.html";
+                      navigate('/Ramadan-1446H/THR');
                     });
                   });
                 }
@@ -122,7 +125,7 @@ const RamadhanPage = () => {
         }
       });
     }, 1000);
-  }, []);
+  }, [navigate]); 
 
   return (
     <div className="ramadhan-page">
@@ -130,15 +133,7 @@ const RamadhanPage = () => {
         autoPlay
         muted
         id="bodyblur"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          zIndex: -1,
-        }}
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
       >
         <source src={videoSource} type="video/mp4" />
         Your browser does not support the video tag.
@@ -147,4 +142,4 @@ const RamadhanPage = () => {
   );
 };
 
-export default RamadhanPage;
+export default App;
