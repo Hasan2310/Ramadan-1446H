@@ -58,7 +58,7 @@ const THR = () => {
             <a href="https://github.com/hasan2310" target="_blank" style="font-size: 40px; color: #fff;">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.instagram.com/hasanahmadh/" target="_blank" style="font-size: 40px; color: #fff;">
+            <a href="https://www.instagram.com/san.lbh/" target="_blank" style="font-size: 40px; color: #fff;">
               <i class="fab fa-instagram"></i>
             </a>
             <a href="https://hasan2310.github.io/Portfolio/" target="_blank" style="font-size: 40px; color: #fff;">
